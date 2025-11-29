@@ -28,7 +28,104 @@
             load("#header", "./templates/header.html");
         </script>
 
-        <main><h2>Home page</h2></main>
+        <main>
+            <style>
+                .item {
+                    padding: 20px;
+                    width: 100%;
+                    height: 260px;
+                    font-size: 2.4rem;
+                    font-weight: 500;
+                    text-align: center;
+                    color: #333;
+                    background: #ddd;
+                }
+
+                main section,
+                footer {
+                    margin-top: 30px;
+                }
+            </style>
+
+            <section class="about">
+                <div class="container">
+                    <div class="row">
+                        <!-- <div class="col">
+                            <div class="item">Image</div>
+                        </div> -->
+                        <div class="col col-lg-8 offset-lg-4 col-xl-12 offset-xl-0">
+                            <div class="item">About us</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="list-product">
+                <div class="container g-2 g-lg-3">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Product Card</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="item">Banner</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="list-blog">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                        <div class="col">
+                            <div class="item">Blog item</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer id="footer"></footer>
