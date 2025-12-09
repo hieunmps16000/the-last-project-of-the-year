@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexCenter {
     display: flex;
     align-items: center;
@@ -14,12 +16,13 @@
 
 .navbar {
     margin-left: 129px;
-    // @include screen(xl) {
-    //     margin-left: 40px;
-    // }
 
-    @media (max-width: 1199.98px) {
-        margin-left: 40px;
+    @include abstracts.screen(xl) {
+        margin-left: 48px;
+    }
+
+    @include abstracts.screen(lg) {
+        display: none;
     }
 
     &__list {
