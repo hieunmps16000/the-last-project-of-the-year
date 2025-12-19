@@ -6,7 +6,11 @@
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    left: 0;
     padding: 30px 0;
+    width: 100%;
     background: var(--header-bg);
 
     @include abstracts.screen(md) {
@@ -20,6 +24,7 @@
 }
 
 .top-bar {
+    position: relative;
     @extend %flexCenter;
 
     @include abstracts.screen(md) {
@@ -53,6 +58,12 @@
 
     &__list {
         @extend %flexCenter;
+    }
+
+    &__item:hover .menu-mega,
+    &__item:hover .menu-mega-sub--full {
+        opacity: 1;
+        visibility: visible;
     }
 
     &__link {
