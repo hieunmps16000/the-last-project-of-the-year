@@ -187,7 +187,7 @@
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
 
         @include abstracts.screen(md) {
-            display: none;
+            // display: none;
         }
     }
 
