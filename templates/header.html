@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- Menu Mobile -->
-        <button class="menu-mobile">
+        <button class="menu-mobile js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/menu.svg" alt="" class="icon menu-mobile__icon" />
         </button>
 
@@ -12,14 +12,17 @@
         </a>
 
         <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="navbar__list">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icons/arrow-left.svg" alt="" />
+            </button>
+            <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Departments
                         <img src="./assets/icons/arrrow-down.svg" alt="" class="icon navbar__arrow" />
                     </a>
-                    <div class="menu-mega">
+                    <div class="menu-mega js-dropdown">
                         <div class="menu-mega-wrap">
                             <div class="menu-mega__inner">
                                 <div class="menu-mega__main">
@@ -38,7 +41,7 @@
                                         </div>
                                         <div class="menu-mega__column-content">
                                             <h2 class="menu-mega__column-heading">All Departments</h2>
-                                            <ul class="menu-mega__column-list">
+                                            <ul class="menu-mega__column-list js-menu-list">
                                                 <li class="menu-mega__column-item">
                                                     <a href="#!" class="menu-mega__column-link"
                                                         >Savings & Featured Shops</a
@@ -4861,6 +4864,7 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <!-- Top action -->
         <div class="top-act">

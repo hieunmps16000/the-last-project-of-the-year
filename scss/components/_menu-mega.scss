@@ -19,7 +19,8 @@
             content: url(../icons/arrow-up.svg);
             position: absolute;
             top: -14px;
-            left: 350px;
+            left: var(--arrow-left-pos);
+            transform: translateX(-50%);
         }
     }
 
@@ -76,12 +77,13 @@
             margin-top: 19px;
         }
 
-        &-item:hover > &-link {
+        &-item:hover > &-link,
+        &-item--active > &-link {
             font-weight: 500;
             color: #0071dc;
         }
 
-        &-item:hover > .menu-mega-sub {
+        &-item--active > .menu-mega-sub {
             opacity: 1;
             visibility: visible;
         }
