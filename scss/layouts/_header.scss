@@ -78,8 +78,9 @@
     }
 
     @include abstracts.screen(md) {
-        inset: 0;
+        inset: 0 15% 0 0;
         padding: 20px 0;
+        border-radius: 0 20px 20px 0;
     }
 
     &__close-btn {
@@ -115,6 +116,8 @@
         @include abstracts.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
+            max-height: calc(100vh - 88px);
+            overflow-y: auto;
         }
     }
 
@@ -126,10 +129,6 @@
 
         @include abstracts.screen(lg) {
             width: 100%;
-
-            &:hover .menu-mega {
-                display: none;
-            }
         }
     }
 
@@ -165,6 +164,7 @@
 
         @include abstracts.screen(lg) {
             margin-left: auto;
+            padding: 19px;
         }
     }
 }
