@@ -3,18 +3,13 @@
 .menu-mega {
     position: absolute;
     left: 0;
+    display: none;
     padding-top: 54px;
     width: min(1240px, 100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity, visibility;
-    transition-duration: 0.3s;
 
     @include abstracts.screen(lg) {
         position: initial;
         padding-top: 0;
-        opacity: 1;
-        visibility: visible;
     }
 
     &-wrap {
@@ -109,6 +104,10 @@
             margin-top: 6px;
             font-weight: 500;
             line-height: 150%;
+
+            @include abstracts.screen(lg) {
+                margin-bottom: 19px;
+            }
         }
 
         &-list {
@@ -126,8 +125,7 @@
         }
 
         &-item--active > .menu-mega-sub {
-            opacity: 1;
-            visibility: visible;
+            display: grid;
         }
 
         &-link {
@@ -142,28 +140,27 @@
 .menu-mega-sub {
     position: absolute;
     inset: 0 0 0 292px;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     height: min(529px, calc(100vh - 110px - 24px - 60px - 24px));
     overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity, visibility;
-    transition-duration: 0.3s;
 
     @include abstracts.screen(lg) {
         position: initial;
         inset: initial;
-        display: block;
+        display: none;
+        grid-template-columns: 1fr;
         padding: 7px 0;
         height: auto;
-        opacity: 1;
-        visibility: visible;
     }
 
     &--full {
         position: initial;
         grid-template-columns: repeat(4, 1fr);
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__column {

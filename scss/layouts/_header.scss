@@ -122,20 +122,28 @@
     }
 
     &__item {
-        &:hover .menu-mega {
-            opacity: 1;
-            visibility: visible;
+        &:hover .menu-mega,
+        &:hover .menu-mega-sub--full {
+            display: grid;
         }
 
         @include abstracts.screen(lg) {
             width: 100%;
-        }
-    }
 
-    &__item:hover .menu-mega,
-    &__item:hover .menu-mega-sub--full {
-        opacity: 1;
-        visibility: visible;
+            &:hover .menu-mega,
+            &:hover .menu-mega-sub--full {
+                display: none;
+            }
+
+            &--active .menu-mega,
+            &--active .menu-mega-sub--full {
+                display: block !important;
+            }
+
+            &--active .navbar__arrow {
+                transform: rotate(0deg);
+            }
+        }
     }
 
     &__link {
@@ -165,6 +173,8 @@
         @include abstracts.screen(lg) {
             margin-left: auto;
             padding: 19px;
+            transform: rotate(-90deg);
+            transition: transform 0.3s;
         }
     }
 }
