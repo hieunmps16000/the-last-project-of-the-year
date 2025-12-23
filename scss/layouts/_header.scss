@@ -63,7 +63,11 @@
 
         margin-left: 0;
         padding: 40px 0;
-        background: #fff;
+        border-radius: 0 20px 20px 0;
+
+        background: var(--navbar-bg);
+        box-shadow: 0 40px 90px 20px var(--navbar-shadow);
+
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
 
@@ -78,9 +82,8 @@
     }
 
     @include abstracts.screen(md) {
-        inset: 0 15% 0 0;
+        inset: 0 20% 0 0;
         padding: 20px 0;
-        border-radius: 0 20px 20px 0;
     }
 
     &__close-btn {
@@ -89,6 +92,7 @@
         @include abstracts.screen(lg) {
             display: block;
             padding: 10px 40px;
+            filter: var(--navbar-icon);
         }
 
         @include abstracts.screen(md) {
@@ -104,7 +108,7 @@
             position: fixed;
             inset: 0;
             z-index: 8;
-            background: rgba(0, 0, 0, 0.5);
+            background: var(--navbar-overlay);
             transition: opacity, visibility;
             transition-duration: 0.5s;
         }
@@ -116,8 +120,12 @@
         @include abstracts.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
-            max-height: calc(100vh - 88px);
+            max-height: calc(100% - 48px);
             overflow-y: auto;
+        }
+
+        @include abstracts.screen(md) {
+            max-height: calc(100% - 148px);
         }
     }
 
@@ -172,9 +180,44 @@
 
         @include abstracts.screen(lg) {
             margin-left: auto;
-            padding: 19px;
             transform: rotate(-90deg);
             transition: transform 0.3s;
+            filter: var(--navbar-icon);
+        }
+    }
+}
+
+.nav-btn {
+    display: none;
+
+    @include abstracts.screen(md) {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 0 40px;
+
+        &__icon {
+            filter: var(--nav-btn-icon);
+        }
+
+        &__title,
+        &__qnt {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 50px;
+        }
+
+        &__qnt {
+            margin-left: auto;
+        }
+    }
+
+    @include abstracts.screen(md) {
+        padding: 0 20px;
+
+        &__title,
+        &__qtn {
+            line-height: 44px;
         }
     }
 }

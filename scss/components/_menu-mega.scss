@@ -6,6 +6,7 @@
     display: none;
     padding-top: 54px;
     width: min(1240px, 100%);
+    color: var(--navbar-text);
 
     @include abstracts.screen(lg) {
         position: initial;
@@ -16,8 +17,8 @@
         position: relative;
         padding: 30px;
         border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 40px 90px 20px rgba(200, 200, 200, 0.4);
+        background: var(--menu-mega-wrap-bg);
+        box-shadow: 0 40px 90px 20px var(--menu-mega-wrap-shadow);
 
         &::before {
             content: url(../icons/arrow-up.svg);
@@ -25,6 +26,7 @@
             top: -14px;
             left: var(--arrow-left-pos);
             transform: translateX(-50%);
+            filter: var(--menu-mega-arrow-up);
         }
 
         @include abstracts.screen(lg) {
