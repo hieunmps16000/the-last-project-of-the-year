@@ -1413,6 +1413,7 @@ button {
     align-items: flex-start;
     max-height: calc(100% - 48px);
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 @media (max-width: 767.98px) {
@@ -1465,7 +1466,6 @@ button {
     margin-left: auto;
     transform: rotate(-90deg);
     transition: transform 0.3s;
-    filter: var(--navbar-icon);
   }
 }
 
